@@ -1,0 +1,63 @@
+/* --- Global Styles & Typography --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #111111;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* --- Layout & Margins --- */
+.container {
+    max-width: 800px; /* Keeps the text line-length comfortable */
+    margin: 0 auto;   /* Centers the container automatically */
+    padding: 40px 20px; /* 40px top/bottom, 20px left/right margins on mobile */
+}
+
+/* --- Specific Sections --- */
+header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666666;
+    font-weight: 600;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888888;
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+}

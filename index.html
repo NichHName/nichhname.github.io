@@ -1,7 +1,81 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <meta charset = "UTF-8">
-        <title>Hello World!</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Nicholas Harsell -- Computational Mathematics</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Nicholas Harsell</h1>
+            <p class="subtitle">Researcher, Developer</p>
+        </header>
+
+        <main>
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>Hello all! My name is Nicholas Harsell. I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies. My career focus is in algorithmic theory, machine learning, numerical analysis, and other fun areas of computational mathematics. Enjoy your stay!</p>
+            </section>
+
+            <section id="current-projects">
+                <h2>Current Mathematics Projects</h2>
+                
+                <div class="project-card">
+                    <h3>PAC-Bayes Bounds with an Information Bottleneck</h3>
+                    <p>PAC-Bayes Bounds are a form of generalization "guarantee" used throughout machine learning. This is a proprietary project which explores potential applications of generalization bounds, information-theoretical divergence, and bottlenecking to markets of all kinds.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Numerical Analysis of Fractional Dimensions of Layed Perlin Noise</h3>
+                    <p>Perlin noise is a gradient noise algorithm used to generate smooth, seemless transitions across a plane. While typically used for virtual terrain generation, layering perlin noise generations on top of one another (called octaves) creates fractional Brownian motion (fBm). This project focuses on the computational methods for calculating the dimension of such processes, with potential implications to come.</p>
+                </div>
+            </section>
+
+            <section id="programming-projects">
+                <h2>Current Programming Projects</h2>
+
+                <div class="project-card">
+                    <h3>Linear Algebra Library</h3>
+                    <h4>C++</h4>
+                    <p>Combining my experience with linear algebra and my desire to master C++, I created a linear algebra library in C++. This includes simple computations such as inner products, L2 norms, and matrix products; it also includes efficient methods to compute eigenvectors/eigenvalues, decompositions (spectal, SVD, LU), and more. Most importantly, this project focuses on efficient storage of data.</p>
+                </div>"
+
+                <div class="project-card">
+                    <h3>Persistent Homology Lite</h3>
+                    <h4>Python</h4>
+                    <p>Topological Data Analysis (TDA) is an explored area, but it still has plenty of benefits in nearly every industry. This project is an exploration for my own knowledge of the inner workings of persistent homology, a tool ubiquitous with TDA.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Mini Ray-Tracer</h3>
+                    <h4>C++</h4>
+                    <p>Ray-tracing is a rendering technique used to create photorealistic images. This project is a mini ray-tracer built in C++ which includes features such as anti-aliasing, depth of field, and more. The goal of this project is to explore the computational geometry and optimization techniques used in ray-tracing.</p>
+                </div>
+            </section>">
+
+            <section id="media">
+                <h2>Media & Publications (Currently Just a Boilerplate!)</h2>
+                <ul>
+                    <li><strong>Upcoming Conference:</strong> [Name of Conference], [Year] - Presenting research on [Topic].</li>
+                    <li><strong>Publication:</strong> [Title of Paper], [Journal/ArXiv link], [Year].</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span>Nicholas Harsell. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
