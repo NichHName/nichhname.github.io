@@ -8,6 +8,13 @@ body {
     padding: 0;
 }
 
+/* --- Layout & Margins --- */
+.container {
+    max-width: 800px; /* Keeps the text line-length comfortable */
+    margin: 0 auto;   /* Centers the container automatically */
+    padding: 40px 20px; /* 40px top/bottom, 20px left/right margins on mobile */
+}
+
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     color: #ffffff; /* Crisp white for headers to make them pop */
