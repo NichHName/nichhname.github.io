@@ -70,14 +70,23 @@ header {
     color: #cccccc; /* Slightly darker text for descriptions */
     line-height: 1.5;
 }
+
+/* Keeps the text inside the clickable card looking normal */
+.card-link {
+    text-decoration: none;
+    color: inherit; 
+    display: block; /* Ensures the link stretches to fit the whole card */
+}
+
 /* --- End of The Cards --- */
 
-/* --- The Interactive Hover Effect --- */
+/* --- Interactive Hover Effect --- */
 /* When a user hovers, the card lifts and the purple shadow glows brighter */
 .project-card:hover, .course-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(139, 92, 246, 0.5); /* A slightly brighter purple */
 }
+/* --- End of Interactive Hover Effect --- */
 
 /* --- Footer --- */
 footer {
@@ -88,3 +97,4 @@ footer {
     border-top: 1px solid #333333;
     padding-top: 20px;
 }
+/* --- End of Footer --- */
