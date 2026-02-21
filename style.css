@@ -15,12 +15,15 @@ h1, h2, h3, h4 {
     margin-bottom: 0.5em;
 }
 
+/* --- End of global styles and typography --- */
+
 /* --- Layout & Margins --- */
 .container {
     max-width: 800px; /* Keeps the text line-length comfortable */
     margin: 0 auto;   /* Centers the container automatically */
     padding: 40px 20px; /* 40px top/bottom, 20px left/right margins on mobile */
 }
+/* --- End of layout and margins --- */
 
 /* --- Specific Sections --- */
 header {
@@ -61,3 +64,55 @@ footer {
     border-top: 1px solid #eaeaea;
     padding-top: 20px;
 }
+
+/* --- End of specific sections --- */
+
+/* --- Coursework Grid --- */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Slightly larger gap to give the text room to breathe */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.course-item {
+    background: #fcfcfc;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left; /* Left-aligned for paragraph readability */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* This ensures all cards in a row stretch to the same height */
+    display: flex;
+    flex-direction: column;
+}
+
+.course-item h4 {
+    margin-top: 0;
+    margin-bottom: 8px; /* Tighter space between header and text */
+    font-size: 1.1rem;
+    color: #111111;
+}
+
+.course-item p {
+    margin: 0;
+    font-size: 0.9rem; /* Smaller font for the description */
+    color: #555555;
+    line-height: 1.5;
+}
+
+.course-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) { /* Increased breakpoint so columns don't squish on tablets */
+    .course-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+/* --- End of coursework grid --- */
