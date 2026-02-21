@@ -1,118 +1,83 @@
 /* --- Global Styles & Typography --- */
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #333333;
+    color: #e0e0e0;
     line-height: 1.6;
-    background-color: #fcfcfc;
+    background-color: #121212;
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: #111111;
+    color: #ffffff; /* Crisp white for headers to make them pop */
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
-
-/* --- End of global styles and typography --- */
-
-/* --- Layout & Margins --- */
-.container {
-    max-width: 800px; /* Keeps the text line-length comfortable */
-    margin: 0 auto;   /* Centers the container automatically */
-    padding: 40px 20px; /* 40px top/bottom, 20px left/right margins on mobile */
-}
-/* --- End of layout and margins --- */
+/* --- End of Global Styles & Typography --- */
 
 /* --- Specific Sections --- */
 header {
     margin-bottom: 40px;
-    border-bottom: 2px solid #eaeaea;
+    border-bottom: 2px solid #333333; /* Darkened border line */
     padding-bottom: 20px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-top: 0;
 }
 
 .subtitle {
     font-size: 1.2rem;
-    color: #666666;
+    color: #a0a0a0; /* Subdued gray for the subtitle */
     font-weight: 600;
 }
+/* --- End of Specific Sections --- */
 
-.project-card {
-    background: #ffffff;
-    border: 1px solid #eaeaea;
+/* --- The Cards --- */
+.project-card, .course-item {
+    background: #1e1e1e; /* Lighter gray to stand out from the background */
+    border: 1px solid #2a2a2a; /* Very subtle border to define the edge */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-
-.project-card h3 {
-    margin-top: 0;
-}
-
-footer {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #888888;
-    border-top: 1px solid #eaeaea;
-    padding-top: 20px;
-}
-
-/* --- End of specific sections --- */
-
-/* --- Coursework Grid --- */
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; /* Slightly larger gap to give the text room to breathe */
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.course-item {
-    background: #fcfcfc;
-    border: 1px solid #eaeaea;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: left; /* Left-aligned for paragraph readability */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     
-    /* This ensures all cards in a row stretch to the same height */
+    /* The Deep Purple Shadow */
+    /* rgba(107, 33, 168, 0.4) is a deep violet at 40% opacity */
+    box-shadow: 0 4px 12px rgba(107, 33, 168, 0.4); 
+    
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Ensure course items keep their flex layout from earlier */
+.course-item {
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
-.course-item h4 {
+.project-card h3, .course-item h4 {
     margin-top: 0;
-    margin-bottom: 8px; /* Tighter space between header and text */
-    font-size: 1.1rem;
-    color: #111111;
+    color: #ffffff;
 }
 
 .course-item p {
     margin: 0;
-    font-size: 0.9rem; /* Smaller font for the description */
-    color: #555555;
+    font-size: 0.9rem; 
+    color: #cccccc; /* Slightly darker text for descriptions */
     line-height: 1.5;
 }
+/* --- End of The Cards --- */
 
-.course-item:hover {
+/* --- The Interactive Hover Effect --- */
+/* When a user hovers, the card lifts and the purple shadow glows brighter */
+.project-card:hover, .course-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.5); /* A slightly brighter purple */
 }
 
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) { /* Increased breakpoint so columns don't squish on tablets */
-    .course-grid {
-        grid-template-columns: 1fr; 
-    }
+/* --- Footer --- */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+    border-top: 1px solid #333333;
+    padding-top: 20px;
 }
-/* --- End of coursework grid --- */
