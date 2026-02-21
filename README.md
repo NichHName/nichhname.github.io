@@ -1,2 +1,2 @@
 # nichhname.github.io
-Website Code!
+This is the back- and front-end code for my personal website, where I will display projects, publications, conference presentations, some university courses, and other career highlights.
