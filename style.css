@@ -72,26 +72,12 @@ header {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Ensure course items keep their flex layout from earlier
-.course-item {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-} */
-
 .project-card h3, .course-item h4 {
     margin-top: 0;
     color: #ffffff;
 }
 
-.course-item p {
-    margin: 0;
-    font-size: 0.9rem; 
-    color: #cccccc; /* Slightly darker text for descriptions */
-    line-height: 1.5;
-}
-
-.course-grid {
+.course-grid-4x {
     /* Turn on CSS Grid */
     display: grid;
     
