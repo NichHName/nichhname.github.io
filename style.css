@@ -101,10 +101,11 @@ header {
     background-color: rgba(18, 18, 18, 0.75); /* Your dark grey glass effect */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    padding: 3rem 1rem; /* Tall padding to make it a nice square-ish tile */
+    padding: 2rem 1rem; /* Tall padding to make it a nice square-ish tile */
     text-align: center;
     cursor: pointer;
-    overflow: hidden; /* Keeps the overlay locked inside the rounded borders */
+    z-index: 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, z-index 0s;
 }
 
 .course-name {
@@ -113,15 +114,53 @@ header {
     color: #ffffff;
 }
 
-.course-topics p {
+.course-tile:hover, 
+.course-tile:focus {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+    
+    z-index: 10; 
+}
+
+.course-topics {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     color: #ffffff;
     font-size: 0.9rem;
     margin: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.course-topics p {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .course-tile:hover .course-topics,
 .course-tile:focus .course-topics {
+    max-height: 500px; 
     opacity: 1;
+    margin-top: 1rem; /* Adds breathing room between the title and the topics */
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none; /* Ensures you can still click things underneath it */
+    z-index: 5; /* Sits above the page, but below the hovered card (which is z-index 10) */
+    
+    /* The 0.5s fade you requested */
+    transition: background-color 0.5s ease;
+}
+
+body:has(.course-tile:hover)::after,
+body:has(.course-tile:focus)::after {
+    background-color: rgba(0, 0, 0, 0.25); /* Darkens the website by a translucent layer */
 }
 
 /* 5. Mobile Responsiveness */
