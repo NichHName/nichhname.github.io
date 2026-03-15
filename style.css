@@ -14,13 +14,13 @@ body {
     will-change: background-position;
 }
 
-/* --- Layout & Margins --- */
 .container {
-    max-width: 900px; /* Keeps the text line-length comfortable */
-    margin: 0 auto;   /* Centers the container automatically */
-    padding: 40px 20px; /* 40px top/bottom, 20px left/right margins on mobile */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
+/* Large h1 text, follows same family/color as h2-4 */
 h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
@@ -28,35 +28,56 @@ h1 {
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: #ffffff; /* Crisp white for headers to make them pop */
+    color: #ffffff;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 
+/* h5, basically entirely for primary language(s) on programming projects */
 h5 {
-    font-size: 1.1em;
+    font-size: 1em;
     font-family: 'Montserrat', sans-serif;
     color: #d6d6d6;
     margin-top: 0.1em;
     margin-bottom: 0.4em;
 }
-/* --- End of Global Styles & Typography --- */
 
-/* --- Specific Sections --- */
 header {
     margin-bottom: 40px;
-    border-bottom: 2px solid #333333; /* Darkened border line */
+    border-bottom: 2px solid #333333;
     padding-bottom: 20px;
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: #a0a0a0; /* Subdued gray for the subtitle */
+    color: #a0a0a0;
     font-weight: 600;
 }
-/* --- End of Specific Sections --- */
 
-/* --- The Cards --- */
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #6b6b6b;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6b6b; 
+}
+/* --- End of Global Styles & Typography --- */
+
+/* --- Project Cards and Course Grid --- */
 .project-card {
     background-color: rgba(18, 18, 18, 0.75);
     color: #ffffff;
@@ -65,8 +86,6 @@ header {
     margin-bottom: 20px;
     border-radius: 8px;
     
-    /* The Deep Purple Shadow */
-    /* rgba(107, 33, 168, 0.4) is a deep violet at 40% opacity */
     box-shadow: 0 4px 12px rgba(107, 33, 168, 0.4); 
     
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -77,32 +96,32 @@ header {
     color: #ffffff;
 }
 
+.project-card:hover {
+    transform: translateY(-3px); /* 3px lift */
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.5); /* A slightly brighter purple */
+}
+
+/* Define 4 x N course grid */
 .course-grid-4x {
-    /* Turn on CSS Grid */
     display: grid;
-    
-    /* Force exactly 4 columns of equal width (1 fraction each) */
     grid-template-columns: repeat(4, 1fr);
-    
-    /* This single line sets BOTH the row and column margins to be identical */
     column-gap: 2rem;
     row-gap: 1rem;
     
-    /* Limit the maximum width so it doesn't stretch too far on huge monitors */
     max-width: 1000px; 
     
-    /* Center the entire grid itself within your website's margins */
     margin: 0 auto; 
 }
 
-/* 2. The Base Tile (The "Front") */
+/* Define course tiles to follow same pattern as project cards */
 .course-tile {
     position: relative;
-    background-color: rgba(18, 18, 18, 0.75); /* Your dark grey glass effect */
+    background-color: rgba(18, 18, 18, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    padding: 2rem 1rem; /* Tall padding to make it a nice square-ish tile */
+    padding: 2rem 1rem;
     text-align: center;
+    vertical-align: middle;
     cursor: pointer;
     z-index: 1;
     transition: transform 0.2s ease, box-shadow 0.2s ease, z-index 0s;
@@ -151,28 +170,27 @@ body::after {
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
     background-color: rgba(0, 0, 0, 0);
-    pointer-events: none; /* Ensures you can still click things underneath it */
+    pointer-events: none; /* Can still click things underneath it */
     z-index: 5; /* Sits above the page, but below the hovered card (which is z-index 10) */
     
-    /* The 0.5s fade you requested */
     transition: background-color 0.5s ease;
 }
 
+/* Darkens rest of website by 25% when hovering over course item */
 body:has(.course-tile:hover)::after,
 body:has(.course-tile:focus)::after {
-    background-color: rgba(0, 0, 0, 0.25); /* Darkens the website by a translucent layer */
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-/* 5. Mobile Responsiveness */
+/* Drop course grid to 2 columns on tablets */
 @media (max-width: 900px) {
-    /* Drop to 2 columns on tablets */
     .course-grid-4x {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Drop course grid to 1 column on phones */
 @media (max-width: 480px) {
-    /* Drop to 1 column on phones */
     .course-grid-4x {
         grid-template-columns: 1fr;
     }
@@ -184,23 +202,7 @@ body:has(.course-tile:focus)::after {
     color: inherit; 
     display: block; /* Ensures the link stretches to fit the whole card */
 }
-
-@media (max-width: 768px) {
-    .course-grid {
-        /* Changes it back to 1 column on smaller screens like phones/tablets */
-        grid-template-columns: 1fr; 
-    }
-}
-
-/* --- End of The Cards --- */
-
-/* --- Interactive Hover Effect --- */
-/* When a user hovers, the card lifts and the purple shadow glows brighter */
-.project-card:hover, .course-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.5); /* A slightly brighter purple */
-}
-/* --- End of Interactive Hover Effect --- */
+/* --- End of Project Crards and Course Grid --- */
 
 /* --- Footer --- */
 footer {
