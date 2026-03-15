@@ -16,9 +16,14 @@ body {
 
 /* --- Layout & Margins --- */
 .container {
-    max-width: 800px; /* Keeps the text line-length comfortable */
+    max-width: 900px; /* Keeps the text line-length comfortable */
     margin: 0 auto;   /* Centers the container automatically */
     padding: 40px 20px; /* 40px top/bottom, 20px left/right margins on mobile */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 
 h1, h2, h3, h4 {
@@ -45,8 +50,9 @@ header {
 
 /* --- The Cards --- */
 .project-card, .course-item {
-    background: #1e1e1e; /* Lighter gray to stand out from the background */
-    border: 1px solid #2a2a2a; /* Very subtle border to define the edge */
+    background-color: rgba(18, 18, 18, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
