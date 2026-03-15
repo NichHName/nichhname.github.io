@@ -91,6 +91,23 @@ header {
     line-height: 1.5;
 }
 
+.course-grid {
+    /* Turn on CSS Grid */
+    display: grid;
+    
+    /* Force exactly 2 columns of equal width (1 fraction each) */
+    grid-template-columns: repeat(2, 1fr);
+    
+    /* This single line sets BOTH the row and column margins to be identical */
+    gap: 2rem; 
+    
+    /* Limit the maximum width so it doesn't stretch too far on huge monitors */
+    max-width: 900px; 
+    
+    /* Center the entire grid itself within your website's margins */
+    margin: 0 auto; 
+}
+
 /* Keeps the text inside the clickable card looking normal */
 .card-link {
     text-decoration: none;
