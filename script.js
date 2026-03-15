@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener('scroll', function() {
     let scrolled = this.window.scrollY;
 
-    let speedMultiplier = 0.2;
+    let speedMultiplier = 0.5;
 
     this.document.body.style.backgroundPositionY = (scrolled * speedMultiplier) + 'px';
 });
