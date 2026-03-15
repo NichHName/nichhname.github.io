@@ -115,6 +115,13 @@ header {
     display: block; /* Ensures the link stretches to fit the whole card */
 }
 
+@media (max-width: 768px) {
+    .course-grid {
+        /* Changes it back to 1 column on smaller screens like phones/tablets */
+        grid-template-columns: 1fr; 
+    }
+}
+
 /* --- End of The Cards --- */
 
 /* --- Interactive Hover Effect --- */
