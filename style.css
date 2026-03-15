@@ -57,7 +57,7 @@ header {
 /* --- End of Specific Sections --- */
 
 /* --- The Cards --- */
-.project-card, .course-item {
+.project-card {
     background-color: rgba(18, 18, 18, 0.75);
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -72,12 +72,12 @@ header {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Ensure course items keep their flex layout from earlier */
+/* Ensure course items keep their flex layout from earlier
 .course-item {
     display: flex;
     flex-direction: column;
     text-align: left;
-}
+} */
 
 .project-card h3, .course-item h4 {
     margin-top: 0;
@@ -95,17 +95,62 @@ header {
     /* Turn on CSS Grid */
     display: grid;
     
-    /* Force exactly 2 columns of equal width (1 fraction each) */
-    grid-template-columns: repeat(2, 1fr);
+    /* Force exactly 4 columns of equal width (1 fraction each) */
+    grid-template-columns: repeat(4, 1fr);
     
     /* This single line sets BOTH the row and column margins to be identical */
-    gap: 2rem; 
+    column-gap: 2rem;
+    row-gap: 1rem;
     
     /* Limit the maximum width so it doesn't stretch too far on huge monitors */
-    max-width: 900px; 
+    max-width: 1000px; 
     
     /* Center the entire grid itself within your website's margins */
     margin: 0 auto; 
+}
+
+/* 2. The Base Tile (The "Front") */
+.course-tile {
+    position: relative;
+    background-color: rgba(18, 18, 18, 0.75); /* Your dark grey glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 3rem 1rem; /* Tall padding to make it a nice square-ish tile */
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden; /* Keeps the overlay locked inside the rounded borders */
+}
+
+.course-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.course-topics p {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.course-tile:hover .course-topics,
+.course-tile:focus .course-topics {
+    opacity: 1;
+}
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 900px) {
+    /* Drop to 2 columns on tablets */
+    .course-grid-4x {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Drop to 1 column on phones */
+    .course-grid-4x {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Keeps the text inside the clickable card looking normal */
