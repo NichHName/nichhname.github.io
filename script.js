@@ -14,3 +14,21 @@ window.addEventListener('scroll', function() {
 
     this.document.body.style.backgroundPositionY = (scrolled * speedMultiplier) + 'px';
 });
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        
+        if (entry.isIntersecting) {
+            
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Don't keep fading in and out
+        }
+    });
+}, {
+    threshold: 0.15 
+});
+
+const hiddenSections = document.querySelectorAll('.scroll-reveal');
+hiddenSections.forEach((section) => {
+    revealObserver.observe(section);
+});

@@ -7,11 +7,33 @@ body {
     margin: 0;
     padding: 0;
 
-    background-image: url('perlin_6_purple.png');
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)),
+        url('perlin_6_purple.png');
     background-size: 100% auto;
     background-position-x: center;
     background-position-y: 0px;
     will-change: background-position;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh;
+    
+    background-image: 
+        repeating-linear-gradient(rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 40px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 40px);
+    
+    /* Fades the grid out as it reaches the edges of the screen */
+    mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%); /* Safari support */
+
+    z-index: 0; 
+    pointer-events: none; 
 }
 
 .container {
@@ -135,7 +157,7 @@ header {
 
 .course-tile:hover, 
 .course-tile:focus {
-    transform: translateY(-5px); 
+    /* transform: translateY(-5px);  */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
     
     z-index: 10; 
@@ -214,3 +236,31 @@ footer {
     padding-top: 20px;
 }
 /* --- End of Footer --- */
+
+/* --- Animations and Whatnot --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); } /* Added a slight drop for polish */
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-text {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 1.0s; }
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
