@@ -8,7 +8,6 @@ body {
     padding: 0;
 
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)),
         url('perlin_6_purple.png');
     background-size: 100% auto;
     background-position-x: center;
@@ -202,6 +201,7 @@ body::after {
 body:has(.course-tile:hover)::after,
 body:has(.course-tile:focus)::after {
     background-color: rgba(0, 0, 0, 0.25);
+    z-index: 7;
 }
 
 /* Drop course grid to 2 columns on tablets */
