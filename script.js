@@ -35,6 +35,33 @@ hiddenSections.forEach((section) => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ============================================
+    // Copy Email, display copy message
+    // ============================================
+    const emailLink = document.querySelector('.contact-icon.email-link');
+    const copyMessage = document.querySelector('.copy-message');
+
+    if (emailLink && copyMessage) {
+        emailLink.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const email = this.getAttribute('data-email');
+            
+            navigator.clipboard.writeText(email).then(() => {
+                copyMessage.classList.add('show');
+
+                setTimeout(() => {
+                    copyMessage.classList.remove('show');
+                }, 2500);
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+            });
+        });
+    }
+
+    // ============================================
+    // 404 Fixing to redirect, keep all in one page
+    // ============================================
     const queryString = window.location.search;
     if (queryString) {
         // Grab the path (e.g., "math" from "?math")
@@ -47,7 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Grab all the navigation tabs and pages
+    // ============================================
+    // SPA Nav (tabs)
+    // ============================================
     const navTabs = document.querySelectorAll('.nav-tab');
     const pageSections = document.querySelectorAll('.page-section');
 
