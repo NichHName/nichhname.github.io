@@ -286,7 +286,52 @@ body:has(.course-tile:focus)::after {
     color: inherit; 
     display: block; /* Ensures the link stretches to fit the whole card */
 }
-/* --- End of Project Crards and Course Grid --- */
+/* --- End of Project Cards and Course Grid --- */
+
+/* --- Contact Links --- */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    
+    background-color: rgba(18, 18, 18, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-card i {
+    font-size: 2rem; 
+    color: #ffffff;
+    width: 40px;
+    text-align: center;
+}
+
+.contact-card:hover,
+.contact-card:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    
+    background-color: rgba(60, 20, 90, 0.4); 
+    color: #ffffff;
+}
+/* --- End of Contact Cards --- */
 
 /* --- Footer --- */
 footer {
