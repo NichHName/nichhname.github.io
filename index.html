@@ -15,18 +15,160 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1 class="fade-in-text delay-1">Nicholas Harsell</h1>
-            <p class="subtitle fade-in-text delay-2">Mathematics Researcher, Computational Developer</p>
-        </header>
+        <nav class="top-nav">
+            <a href="#" class="nav-tab active" data-target="page-home">Home</a>
+            <a href="#" class="nav-tab" data-target="page-math">Math Research</a>
+            <a href="#" class="nav-tab" data-target="page-software">Software</a>
+            <a href="#" class="nav-tab" data-target="page-coursework">Coursework</a>
+            <a href="#" class="nav-tab" data-target="page-contact">Contact</a>
+        </nav>
 
-        <main>
-            <section id="bio" class="fade-in-text delay-3">
-                <h2>Biography</h2>
-                <p>My name is Nicholas Harsell; currently, I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies, as well as university-sponsored research in theoretical development of algorithms and data collection through the College of Science and Mathematics and College of Business. My career focus is in algorithmic theory, machine learning, numerical analysis, and other fun areas of computational mathematics. Here, you will find a more expansive list of my current projects, coursework, conference presentations, and publications.</p>
-            </section>
+        <main class="content-wrapper">
+            <div id="page-home" class="page-section active-page">
+                <header>
+                    <h1 class="fade-in-text delay-1">Nicholas Harsell</h1>
+                    <p class="subtitle fade-in-text delay-2">Mathematics Researcher, Computational Developer</p>
+                </header>
 
-            <section id="current-projects" class="scroll-reveal">
+                <section id="bio" class="fade-in-text delay-3">
+                    <h2>Biography</h2>
+                    <p>My name is Nicholas Harsell; currently, I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies, as well as university-sponsored research in theoretical development of algorithms and data collection through the College of Science and Mathematics and College of Business. My career focus is in algorithmic theory, machine learning, numerical analysis, and other fun areas of computational mathematics. Here, you will find a more expansive list of my current projects, coursework, conference presentations, and publications.</p>
+                </section>
+            </div>
+
+            <div id="page-math" class="page-section">
+                <header>
+                    <h1 class="fade-in-text delay-1">Mathematics Projects</h1>
+                </header>
+                <section class="bio fade-in-text delay-2">
+                    <h2>Overview</h2>
+                    <p>The following projects are some highlighted current projects of mine; what separates these projects from my programming projects is a highlight in theoretical math development/understanding.</p>
+                </section>
+
+                <section class="scroll-reveal">
+                    <div class="project-card">
+                        <h3>PAC-Bayes Information Bottleneck Framework Expansion</h3>
+                        <p>PAC-Bayes Bounds are a form of generalization "guarantee" used throughout machine learning. This is a proprietary project which explores applications of generalization bounds, information-theoretical divergence, and bottlenecking to markets of all kinds.</p>
+                    </div>
+
+                    <a href="https://github.com/NichHName/fractal-dimension" class="card-link">
+                        <div class="project-card">
+                            <h3>Numerical Analysis of Fractional Dimensions of Layed Perlin Noise</h3>
+                            <p>Perlin noise is a gradient noise algorithm used to generate smooth, seemless transitions across a plane. While typically used for virtual terrain generation, layering perlin noise generations on top of one another (called octaves) creates fractional Brownian motion (fBm). This project focuses on the computational methods for calculating the dimension of such processes, with potential implications to come.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://youtube.com/playlist?list=PLnzpcioXpyqXPlc79_4SSRa0geHB4Yuzq&si=7mfNq7wxSNNT8vX-" class="card-link">
+                        <div class="project-card">
+                            <h3>Visual Intuition for Advanced Mathematics</h3>
+                            <p>This project centered around the idea that visualizing advanced mathematics can assist students in learning most topics. Using Manim, a Python library developed by Grant Sanderson (3Blue1Brown), this project includes 30+ minutes of tailored animations for students learning linear algebra, real analysis, probability, stochastic processes, and multivariate calculus.</p>
+                        </div>
+                    </a>
+                </section>
+            </div>
+
+            <div id="page-software" class="page-section">
+                <header>
+                    <h1 class="fade-in-text delay-1">Programming Projects</h1>
+                </header>
+                <section class="bio fade-in-text delay-2">
+                    <h2>Overview</h2>
+                    <p>In addition to developing an interest and experience in higher-level math, I also find myself programming various medium-sized projects in my free time. These range from numerical/mathematical libraries to Chess engines to this website, allowing me to gain experience in all sides of programming and development.</p>
+                </section>
+                <section class="scroll-reveal">
+                    <a href="https://github.com/NichHName/linalglib" class="card-link">
+                        <div class="project-card">
+                            <h3>Linear Algebra Library</h3>
+                            <h5>Primary Language: C++</h5>
+                            <p>Combining my experience with linear algebra and my desire to master C++, I created a linear algebra library in C++. This includes simple computations such as inner products, L2 norms, and matrix products; it also includes efficient methods to compute eigenvectors/eigenvalues, decompositions (spectal, SVD, LU), and more. Most importantly, this project focuses on efficient storage of data.</p>
+                        </div>
+                    </a>
+
+                    <div class="project-card">
+                        <h3>Persistent Homology Lite</h3>
+                        <h5>Primary Language: Python</h5>
+                        <p>Topological Data Analysis (TDA) is an explored area, but it still has plenty of benefits in nearly every industry. This project is an exploration for my own knowledge of the inner workings of persistent homology, a tool ubiquitous with TDA.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Mini Ray-Tracer</h3>
+                        <h5>Primary Language: C++</h5>
+                        <p>Ray-tracing is a rendering technique used to create photorealistic images. This project is a mini ray-tracer built in C++ which includes features such as anti-aliasing, depth of field, and more. The goal of this project is to explore the computational geometry and optimization techniques used in ray-tracing.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div id="page-coursework" class="page-section">
+                <header>
+                    <h1 class="fade-in-text delay-1">Favorite Coursework</h1>
+                </header>
+                <section class="bio fade-in-text delay-2">
+                    <h2>Overview</h2>
+                    <p>I had the opportunity to complete 40 college credits in high school, allowing me to enroll in far more major- and minor-specific courses during my time at JMU. Listed here are a few of my favorites, due to their unique impact, utility, challenge, and/or inspiration.</p>
+                </section>
+                <section class="scroll-reveal">
+                    <div class="course-grid-4x">
+                        <div class="course-tile" tabindex="0">
+                            <div class="course-name">Numerical Analysis</div>
+                            <div class="course-topics">
+                                <p>Error correction, rootfinding (Newton-Raphson, Muller's method, Durand-Kerner, Aberth's), interpolation (Lagrange, Hermite, B-spline, Bezier curve), Chebyshev polynomials</p>
+                            </div>
+                        </div>
+
+                        <div class="course-tile" tabindex="0">
+                            <div class="course-name">Real Analysis I/II</div>
+                            <div class="course-topics">
+                                <p>Axioms of \( \mathbb{Q} \), least upper bound property, cardinality, interior/limit open/closed sets, density, compactness, sequences, series, functions, differentiation, Riemann integration</p>
+                            </div>
+                        </div>
+
+                        <div class="course-tile" tabindex="0">
+                            <div class="course-name">Advanced Linear Algebra</div>
+                            <div class="course-topics">
+                                <p>Vector spaces, linear independence, span, bases, inner products, orthogonality/orthonormality, Riesz Representation Theorem, direct sums, block matrices; unitary, hermitian, and normal matrices; Spectral Theorem, singular value decomposition</p>
+                            </div>
+                        </div>
+
+                        <div class="course-tile" tabindex="0">
+                            <div class="course-name">Fourier Analysis and Partial Differential Equations</div>
+                            <div class="course-topics">
+                                <p>Heat equation, diffusion equation, divergence theorem/Green's theorem, separation, the Laplacian, orthogonality of sines/cosines, equilibrium/general solutions in cartesian & spherical coordinates</p>
+                            </div>
+                        </div>
+
+                        <div class="course-tile" tabindex="0">
+                            <div class="course-name">Data Structures and Algorithms</div>
+                            <div class="course-topics">
+                                <p>Big-\( \mathcal{O} \) / Big-\( \Omega \) / Big-\( \Theta \) notation, amortized analysis, custom iterators, linked lists, array-based lists, queues, sorting, searching</p>
+                            </div>
+                        </div>
+
+                        <div class="course-tile" tabindex="0">
+                            <div class="course-name">Abstract Algebra</div>
+                            <div class="course-topics">
+                                <p>Groups, homomorphisms, isomorphisms, roots of unity, symmetric group, dihedral group, permutation matrices, fundamental homomorphism theory</p>
+                            </div>
+                        </div>
+
+                        <div class="course-tile" tabindex="0">
+                            <div class="course-name">Mathematical Finance</div>
+                            <div class="course-topics">
+                                <p>Probability measures, probability spaces, expectation, stochastic integral evaluation, Ito's Lemma derivation</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="page-contact" class="page-section">
+                <header>
+                    <h1 class="fade-in-text delay-1">Get In Touch</h1>
+                </header>
+                <section class="bio fade-in-text delay-3">
+                    <p>Given I have time to commit, I am always open to exploring new avenues of computational research will passionate and curious people. I check my LinkedIn direct messages and email consistently, though it may be a day or two before I can sit down to fully respond. Regardless, I am open to research opportunities in acedemia and industry.</p>
+                </section>
+            </div>
+            <!-- <section id="current-projects" class="scroll-reveal">
                 <h2>Current Mathematics Projects</h2>
                 
                 <div class="project-card">
@@ -131,9 +273,9 @@
                 <h2>Media & Publications</h2>
                 <ul>
                     <li><strong>Upcoming Conference:</strong> Virginia Academy of Science, 2026 - Presenting research on block-iterative conditional gradient algorithms for splitting problems.</li>
-                    <!-- <li><strong>Publication:</strong> [Title of Paper], [Journal/ArXiv link], [Year].</li> -->
+                    <li><strong>Publication:</strong> [Title of Paper], [Journal/ArXiv link], [Year].</li>
                 </ul>
-            </section>
+            </section> -->
         </main>
 
         <footer>

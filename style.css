@@ -41,6 +41,55 @@ body::before {
     padding: 40px 20px;
 }
 
+/* Page Nav */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem; /* Space between each tab */
+    padding: 2rem 0; 
+    margin-bottom: 2rem;
+}
+
+.nav-tab {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 1.1rem;
+    
+    transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.nav-tab:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.nav-tab.active {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 4px;
+}
+
+.page-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.page-section.active-page {
+    display: block; /* Puts the page back on the screen */
+    opacity: 1;     /* Makes it fully visible */
+}
+
+/* Special class we will use in Javascript to fade out the current page 
+  BEFORE removing the 'active-page' class 
+*/
+.page-section.fading-out {
+    opacity: 0; 
+}
+
 /* Large h1 text, follows same family/color as h2-4 */
 h1 {
     font-size: 3.5rem;
