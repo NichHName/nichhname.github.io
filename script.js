@@ -34,7 +34,20 @@ hiddenSections.forEach((section) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Grab all the navigation tabs and pages
+
+    const queryString = window.location.search;
+    if (queryString) {
+        // Grab the path (e.g., "math" from "?math")
+        const targetPath = queryString.substring(1); 
+        
+        // Find the matching tab and virtually "click" it
+        const targetTab = document.querySelector(`.nav-tab[data-target="page-${targetPath}"]`);
+        if (targetTab) {
+            targetTab.click();
+        }
+    }
+
+    // Grab all the navigation tabs and pages
     const navTabs = document.querySelectorAll('.nav-tab');
     const pageSections = document.querySelectorAll('.page-section');
 
