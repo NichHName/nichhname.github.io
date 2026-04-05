@@ -35,9 +35,9 @@ hiddenSections.forEach((section) => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ============================================
+    // ==============================================================
     // Copy Email, display copy message
-    // ============================================
+    // ==============================================================
     const emailLink = document.querySelector('.contact-icon.email-link');
     const copyMessage = document.querySelector('.copy-message');
 
@@ -59,24 +59,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ============================================
-    // 404 Fixing to redirect, keep all in one page
-    // ============================================
+    // ==============================================================
+    // 404 Fixing to redirect, keep all in one page (silent router)
+    // ==============================================================
     const queryString = window.location.search;
+    let targetPath = "home"; // Default to home
+
     if (queryString) {
         // Grab the path (e.g., "math" from "?math")
-        const targetPath = queryString.substring(1); 
+        targetPath = queryString.substring(1); 
         
-        // Find the matching tab and virtually "click" it
-        const targetTab = document.querySelector(`.nav-tab[data-target="page-${targetPath}"]`);
-        if (targetTab) {
-            targetTab.click();
+        // Clean up the URL instantly to look professional
+        window.history.replaceState(null, '', `/${targetPath}`);
+    }
+
+    // Instantly set the correct page as active
+    document.querySelectorAll('.page-section').forEach(page => {
+        page.classList.remove('active-page');
+    });
+    const initialPage = document.getElementById(`page-${targetPath}`);
+    if (initialPage) {
+        initialPage.classList.add('active-page');
+        
+        // Trigger any scroll animations for the loaded page
+        if (typeof resetRevealAnimations === 'function') {
+            resetRevealAnimations(initialPage);
         }
     }
 
-    // ============================================
+    // Instantly highlight the correct navigation tab
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('data-target') === `page-${targetPath}`) {
+            tab.classList.add('active');
+        }
+    });
+
+    // ==============================================================
     // SPA Nav (tabs)
-    // ============================================
+    // ==============================================================
     const navTabs = document.querySelectorAll('.nav-tab');
     const pageSections = document.querySelectorAll('.page-section');
 
