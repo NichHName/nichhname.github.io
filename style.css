@@ -48,7 +48,7 @@ body::before {
     align-items: center;
     gap: 2.5rem; /* Space between each tab */
     padding: 2rem 0; 
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
 }
 
 .nav-tab {
@@ -75,7 +75,7 @@ body::before {
 .page-section {
     display: none;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 0.4s ease;
 }
 
 .page-section.active-page {
@@ -83,31 +83,44 @@ body::before {
     opacity: 1;     /* Makes it fully visible */
 }
 
-/* Special class we will use in Javascript to fade out the current page 
-  BEFORE removing the 'active-page' class 
-*/
+/* Special class to fade out the current page BEFORE removing the 'active-page' class */
 .page-section.fading-out {
     opacity: 0; 
 }
 
-/* Large h1 text, follows same family/color as h2-4 */
 h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem; 
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
-
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
 /* h5, basically entirely for primary language(s) on programming projects */
 h5 {
-    font-size: 1em;
     font-family: 'Montserrat', sans-serif;
     color: #d6d6d6;
+    font-size: 1em;
     margin-top: 0.1em;
     margin-bottom: 0.4em;
 }

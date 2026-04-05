@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Reset scroll animations for the new page so they fire again
                 resetRevealAnimations(targetPage);
 
-            }, 1000); 
+            }, 450); 
         });
     });
 
