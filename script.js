@@ -153,4 +153,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const courseTiles = document.querySelectorAll('.course-tile');
+
+    courseTiles.forEach(tile => {
+        tile.addEventListener('click', function(e) {
+            
+            // Check if this card is already open
+            const isAlreadyOpen = this.classList.contains('touch-open');
+            
+            // First, instantly close ALL cards
+            courseTiles.forEach(t => t.classList.remove('touch-open'));
+            
+            // If the card we clicked WASN'T open, open it now!
+            if (!isAlreadyOpen) {
+                this.classList.add('touch-open');
+            }
+            
+            // Stop the click from triggering the "close all" rule below
+            e.stopPropagation(); 
+        });
+    });
+
+    document.addEventListener('click', function() {
+        courseTiles.forEach(t => t.classList.remove('touch-open'));
+    });
 });

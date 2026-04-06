@@ -188,23 +188,27 @@ header {
 .course-grid-4x {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+
     column-gap: 2rem;
     row-gap: 1rem;
-    
     max-width: 1000px; 
-    
     margin: 0 auto; 
 }
 
 /* Define course tiles to follow same pattern as project cards */
 .course-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     position: relative;
     background-color: rgba(18, 18, 18, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 2rem 1rem;
     text-align: center;
-    vertical-align: middle;
     cursor: pointer;
     z-index: 1;
     transition: transform 0.2s ease, box-shadow 0.2s ease, z-index 0s;
@@ -214,10 +218,13 @@ header {
     font-size: 1.2rem;
     font-weight: bold;
     color: #ffffff;
+
+    margin: 0;
 }
 
 .course-tile:hover, 
-.course-tile:focus {
+.course-tile:focus,
+.course-tile.touch-open {
     /* transform: translateY(-5px);  */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
     
@@ -242,7 +249,8 @@ header {
 }
 
 .course-tile:hover .course-topics,
-.course-tile:focus .course-topics {
+.course-tile:focus .course-topics,
+.course-tile.touch-open .course-topics {
     max-height: 500px; 
     opacity: 1;
     margin-top: 1rem; /* Adds breathing room between the title and the topics */
@@ -261,7 +269,8 @@ body::after {
 
 /* Darkens rest of website by 25% when hovering over course item */
 body:has(.course-tile:hover)::after,
-body:has(.course-tile:focus)::after {
+body:has(.course-tile:focus)::after,
+body:has(.course-tile.touch-open)::after {
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 7;
 }
@@ -370,10 +379,56 @@ footer {
     transform: translateY(40px);
     
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
 }
 
 .scroll-reveal.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+}
+/* --- End of Animations and Whatnot --- */
+
+/* Explicit mobile support */
+@media (max-width: 768px) {
+    
+    /* 1. TYPOGRAPHY SCALING */
+    /* Shrinks the massive headers so they don't break the screen width */
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    /* 2. THE NAVIGATION BAR */
+    .top-nav {
+        flex-wrap: wrap;       /* Allows the tabs to stack onto new lines */
+        gap: 1rem 1.5rem;      /* 1rem vertical gap, 1.5rem horizontal gap */
+        padding: 1.5rem 1rem;  /* Adds a little breathing room on the sides */
+    }
+
+    .nav-tab {
+        font-size: 0.95rem;    /* Slightly smaller font to fit 3 on a line */
+        text-align: center;    /* Fixes the multi-line "Math Research" issue */
+        line-height: 1.2;      /* Keeps wrapped lines close together */
+        
+        /* This flex rule tells the tabs to take up roughly 28% of the screen. 
+           Because 28 x 3 = 84%, exactly 3 tabs will fit on the top row, 
+           forcing the remaining 2 to drop to the bottom row, perfectly centered! */
+        flex: 0 1 28%; 
+    }
+
+    /* 3. CONTACT ICONS */
+    .contact-icons {
+        gap: 2rem; /* Shrinks the massive gap so they don't push off-screen */
+        margin-top: 2rem;
+    }
+    
+    /* 4. GENERAL CONTAINER PADDING */
+    /* Ensures your paragraphs don't touch the physical glass of the phone edge */
+    .container {
+        padding: 0 1.5rem;
+    }
 }
