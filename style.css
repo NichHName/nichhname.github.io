@@ -204,7 +204,7 @@ header {
     align-items: center;
 
     position: relative;
-    background-color: rgba(18, 18, 18, 0.75);
+    background-color: rgba(18, 18, 18, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 2rem 1rem;
@@ -249,11 +249,11 @@ header {
     position: absolute;
     top: 100%;
     left: -1px;
-    width: calc(100% + 2px);
+    right: -1px;
 
     box-sizing: border-box;
 
-    background-color: rgba(18, 18, 18, 0.75);
+    background-color: rgba(18, 18, 18, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-top: none;
     border-radius: 0 0 8px 8px;
