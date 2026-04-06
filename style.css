@@ -238,10 +238,11 @@ header {
     z-index: 10;
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    background-color: rgba(60, 20, 90, 0.4);
     
     /* Flattens the bottom corners of the main tile so the dropdown connects seamlessly */
     border-radius: 8px 8px 0 0; 
+
+    border-bottom-color: transparent;
 }
 
 .course-topics {
@@ -250,7 +251,9 @@ header {
     left: -1px;
     width: calc(100% + 2px);
 
-    background-color: rgba(60, 20, 90, 0.4);
+    box-sizing: border-box;
+
+    background-color: rgba(18, 18, 18, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-top: none;
     border-radius: 0 0 8px 8px;
