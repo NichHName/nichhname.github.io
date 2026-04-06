@@ -187,7 +187,7 @@ header {
 /* Define 4 x N course grid */
 .course-grid-4x {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-auto-rows: 1fr;
 
     column-gap: 2rem;
@@ -218,27 +218,51 @@ header {
     font-size: 1.2rem;
     font-weight: bold;
     color: #ffffff;
-
     margin: 0;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    transition: transform 0.3s ease;
 }
 
-.course-tile:hover, 
+.course-tile:hover .course-name, 
+.course-tile:focus .course-name,
+.course-tile.touch-open .course-name {
+    transform: scale(1.1);
+}
+
+.course-tile:hover,
 .course-tile:focus,
 .course-tile.touch-open {
-    /* transform: translateY(-5px);  */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+    z-index: 10;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(60, 20, 90, 0.4);
     
-    z-index: 10; 
+    /* Flattens the bottom corners of the main tile so the dropdown connects seamlessly */
+    border-radius: 8px 8px 0 0; 
 }
 
 .course-topics {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: calc(100% + 2px);
+
+    background-color: rgba(60, 20, 90, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
     max-height: 0;
     opacity: 0;
     overflow: hidden;
+    padding: 0 1rem;
     color: #ffffff;
-    font-size: 0.9rem;
-    margin: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+
+    transition: max-height 0.4s ease, opacity 0.2s ease, padding 0.4s ease;
 }
 
 .course-topics p {
@@ -253,7 +277,9 @@ header {
 .course-tile.touch-open .course-topics {
     max-height: 500px; 
     opacity: 1;
-    margin-top: 1rem; /* Adds breathing room between the title and the topics */
+    padding: 1rem; /* Adds breathing room between the title and the topics */
+
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
 body::after {
