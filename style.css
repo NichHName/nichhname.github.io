@@ -249,7 +249,7 @@ header {
     position: absolute;
     top: 100%;
     left: -1px;
-    right: -1px;
+    right: -2px;
 
     box-sizing: border-box;
 
