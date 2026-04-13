@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Nicholas Harsell - Computational Mathematician</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +13,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css?v=7"> <!-- Update to v(t+1) when CSS doesn't update -->
-    <!-- From above: "v=X" means I have nearly punched my laptop X-1 times -->
 </head>
 
-<!-- Version Testing: final course card updates, hopefully? -->
+<!-- Version Testing: Project updates, adding images section, images/ folder -->
 
 <body>
     <div class="container">
         <nav class="top-nav">
             <a href="/" class="nav-tab active" data-target="page-home">Home</a>
             <a href="/math" class="nav-tab" data-target="page-math">Math Research</a>
-            <a href="/programming" class="nav-tab" data-target="page-software">Programming</a>
+            <a href="/programming" class="nav-tab" data-target="page-programming">Programming</a>
             <a href="/courses" class="nav-tab" data-target="page-coursework">Coursework</a>
             <a href="/contact" class="nav-tab" data-target="page-contact">Contact</a>
         </nav>
@@ -32,25 +31,37 @@
             <div id="page-home" class="page-section active-page">
                 <header>
                     <h1 class="fade-in-text delay-1">Nicholas Harsell</h1>
-                    <p class="subtitle fade-in-text delay-2">Mathematics Researcher, Computational Developer</p>
+                    <p class="subtitle fade-in-text delay-2">Mathematics Researcher & Computational Developer</p>
                 </header>
 
                 <section id="bio" class="fade-in-text delay-3">
                     <h2>Biography</h2>
-                    <p>My name is Nicholas Harsell! Currently, I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies, as well as university-sponsored research in theoretical development of algorithms and data collection through the College of Science and Mathematics and College of Business. My career focus is in algorithmic theory, machine learning, numerical analysis, and other fun areas of computational mathematics. Here, you will find a more expansive list of my current projects, coursework, conference presentations, and publications.</p>
+                    <p>My name is Nicholas Harsell! Currently, I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies, as well as university-sponsored research in theoretical development of algorithms and data collection through the College of Science and Mathematics and College of Business. My career focus is in optimization, machine learning, algorithms, numerical analysis, and other fun areas of computational mathematics. Here, you will find a more expansive list of my current projects, coursework, conference presentations, and publications.</p>
+                </section>
+
+                <section class="scroll-reveal">
+                    <h6>A View Into My Work</h6>
+                    <p>I've been able to participate in a multitude of endeavors, extracurricular or otherwise. I have participated in undergraduate research for both the College of Science and Mathematics (CSM), and the College of Business (COB).</p>
+                    <p>(WIP) Below are some pictures from my time as a student, research assistant, and student organization President/Vice President!</p>
                 </section>
             </div>
 
             <div id="page-math" class="page-section">
                 <header>
-                    <h1 class="fade-in-text delay-1">Mathematics Projects</h1>
+                    <h1 class="fade-in-text delay-1">Mathematics Research Projects</h1>
                 </header>
                 <section class="bio fade-in-text delay-2">
                     <h2>Overview</h2>
-                    <p>The following projects are some highlighted current projects of mine; what separates these projects from my programming projects is a highlight in theoretical math development/understanding. Any good computational math project has programmed and reproduceable numerical experiments, but these explore these experiments in unexplored or entirely new areas of analysis and machine learning.</p>
+                    <p>The following projects are some highlighted current projects of mine; what separates these projects from my programming projects is a highlight in theoretical math development/understanding. Any good computational math project has programmed and reproduceable numerical experiments, but these projects run experiments in relatively unexplored (or entirely new) areas of analysis and machine learning.</p>
                 </section>
 
                 <section class="scroll-reveal">
+
+                    <div class="project-card">
+                        <h3>Optimization and Algorithmic Theory Lab</h3>
+                        <p>I am a Research Assistant for the Optimization and Algorithmic Theory (OAT) Lab, a grant-funded research endeavor in theory and application of optimization algorithms. My work involves proving aspects of algorithmic convergence for variations of Frank-Wolfe algorithms dealing with convex and non-convex functions over multiple convex constraint sets.</p>
+                    </div>
+
                     <div class="project-card">
                         <h3>Reparameterization of the Information Bottleneck</h3>
                         <p>The information bottleneck characterizes the tradeoff between information compression and learning. It has notable uses in neural network training and, more recently, a potential ability to explain the generalization abilities of deep neural networks (DNNs). This is a proprietary project which explores a new view of a time-dependent tradeoff parameter for time-series learning, neural network training, and generalization guarantees through PAC-Bayes bounds.</p>
@@ -66,13 +77,13 @@
                     <a href="https://youtube.com/playlist?list=PLnzpcioXpyqXPlc79_4SSRa0geHB4Yuzq&si=7mfNq7wxSNNT8vX-" target="_blank" class="card-link">
                         <div class="project-card">
                             <h3>Visual Intuition for Advanced Mathematics</h3>
-                            <p>This project centered around the idea that visualizing advanced mathematics can assist students in learning most topics. Using Manim, a Python library developed by Grant Sanderson (3Blue1Brown), this project includes 30+ minutes of tailored animations for students learning linear algebra, real analysis, probability, stochastic processes, and multivariate calculus.</p>
+                            <p>This project is slightly different from the rest; it is centered around the idea that visualizing advanced mathematics can assist students in learning most topics. This project was programmed in Manim, a Python library developed by Grant Sanderson (3Blue1Brown), and includes 30+ minutes of tailored animations for students learning linear algebra, real analysis, probability, stochastic processes, and multivariate calculus.</p>
                         </div>
                     </a>
                 </section>
             </div>
 
-            <div id="page-software" class="page-section">
+            <div id="page-programming" class="page-section">
                 <header>
                     <h1 class="fade-in-text delay-1">Programming Projects</h1>
                 </header>

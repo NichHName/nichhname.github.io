@@ -8,7 +8,7 @@ body {
     padding: 0;
 
     background-image: 
-        url('perlin_6_purple.png');
+        url('images/perlin_6_purple.png');
     background-size: 100% auto;
     background-position-x: center;
     background-position-y: 0px;
@@ -88,41 +88,49 @@ body::before {
     opacity: 0; 
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Monsterrat', sans-serif;
+}
+
 h1 {
-    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 3.5rem;
     margin-top: 0;
     margin-bottom: 1rem; 
 }
 h2 {
-    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 2rem;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 h3 {
-    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 1.5rem;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 h4 {
-    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 1.2rem;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
+
 /* h5, basically entirely for primary language(s) on programming projects */
 h5 {
-    font-family: 'Montserrat', sans-serif;
     color: #d6d6d6;
     font-size: 1em;
     margin-top: 0.1em;
     margin-bottom: 0.4em;
+}
+
+/* h6, Subtitles */
+h6 {
+    color: #ffffff;
+    font-size: 2.3rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.3rem;
 }
 
 header {
