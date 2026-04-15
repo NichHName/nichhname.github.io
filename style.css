@@ -1,4 +1,6 @@
+/* =============================================== */
 /* --- Global Styles & Typography --- */
+/* =============================================== */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #e0e0e0;
@@ -41,7 +43,9 @@ body::before {
     padding: 40px 20px;
 }
 
+/* =============================================== */
 /* Page Nav */
+/* =============================================== */
 .top-nav {
     display: flex;
     justify-content: center;
@@ -88,6 +92,7 @@ body::before {
     opacity: 0; 
 }
 
+/* Text */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Monsterrat', sans-serif;
 }
@@ -125,14 +130,6 @@ h5 {
     margin-bottom: 0.4em;
 }
 
-/* h6, Subtitles */
-h6 {
-    color: #ffffff;
-    font-size: 2.3rem;
-    margin-top: 0.7rem;
-    margin-bottom: 0.3rem;
-}
-
 header {
     margin-bottom: 40px;
     border-bottom: 2px solid #333333;
@@ -145,7 +142,7 @@ header {
     font-weight: 600;
 }
 
-/* width */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: thin;
 }
@@ -168,7 +165,10 @@ header {
 }
 /* --- End of Global Styles & Typography --- */
 
+
+/* =============================================== */
 /* --- Project Cards and Course Grid --- */
+/* =============================================== */
 .project-card {
     background-color: rgba(18, 18, 18, 0.75);
     color: #ffffff;
@@ -334,7 +334,114 @@ body:has(.course-tile.touch-open)::after {
 }
 /* --- End of Project Cards and Course Grid --- */
 
-/* --- Contact Links --- */
+/* =============================================== */
+/* --- Resume Block --- */
+/* =============================================== */
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 3rem auto 0 auto;
+}
+
+.resume-item {
+    padding: 0 1rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.resume-item:hover,
+.resume-item:focus {
+    transform: translateX(10px);
+    border-left: 2px solid rgba(138, 43, 226, 0.8);
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume-left h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.resume-organization {
+    margin: 0.3rem 0 0 0;
+    color: #b088f0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.resume-date {
+    color: #a0a0a0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.resume-bullets {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #d0d0d0;
+}
+
+.resume-bullets li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.resume-bullets li:last-child {
+    margin-bottom: 0;
+}
+
+/* Explicit Mobile Fix */
+@media (max-width: 768px) {
+    .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+/* --- End of resume block --- */
+
+
+/* =============================================== */
+/* --- Deep Links --- */
+/* =============================================== */
+.deep-link {
+    color: #b088f0;
+    text-decoration: none;
+    border-bottom: 1px dotted #b088f0;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.deep-link:hover {
+    color: #c7b3e8;
+    border-bottom: 1px solid #c7b3e8;
+}
+
+@keyframes target-pulse {
+    0%   { background-color: rgba(138, 43, 226, 0); }
+    15%  { background-color: rgba(138, 43, 226, 0.25); border-left-color: rgba(138, 43, 226, 1); }
+    100% { background-color: rgba(138, 43, 226, 0); }
+}
+
+.target-highlight {
+    animation: target-pulse 2s ease-out;
+}
+/* --- End of Deep Links --- */
+
+/* =============================================== */
+/* --- Contact Cards --- */
+/* =============================================== */
 .contact-icons {
     display: flex;
     justify-content: center;
@@ -385,7 +492,10 @@ body:has(.course-tile.touch-open)::after {
 }
 /* --- End of Contact Cards --- */
 
+
+/* =============================================== */
 /* --- Footer --- */
+/* =============================================== */
 footer {
     margin-top: 50px;
     text-align: center;
@@ -396,7 +506,10 @@ footer {
 }
 /* --- End of Footer --- */
 
+
+/* =============================================== */
 /* --- Animations and Whatnot --- */
+/* =============================================== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); } /* Added a slight drop for polish */
   to { opacity: 1; transform: translateY(0); }
@@ -424,7 +537,10 @@ footer {
 }
 /* --- End of Animations and Whatnot --- */
 
+
+/* =============================================== */
 /* Explicit mobile support */
+/* =============================================== */
 @media (max-width: 768px) {
     
     /* 1. TYPOGRAPHY SCALING */
@@ -468,4 +584,5 @@ footer {
     .container {
         padding: 0 1.5rem;
     }
+    /* End of Explicit Mobile Support */
 }

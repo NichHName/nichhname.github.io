@@ -33,6 +33,9 @@ hiddenSections.forEach((section) => {
     revealObserver.observe(section);
 });
 
+// =======================================================
+// Big DOM listener
+// =======================================================
 document.addEventListener('DOMContentLoaded', () => {
 
     // ==============================================================
@@ -177,5 +180,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', function() {
         courseTiles.forEach(t => t.classList.remove('touch-open'));
+    });
+
+    // =========================================
+    // Deep Links
+    // =========================================
+    const deepLinks = document.querySelectorAll('.deep-link');
+
+    deepLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetPageId = this.getAttribute('data-target-page');
+            const targetElementId = this.getAttribute('data-target-id');
+            const targetPage = document.getElementById(targetPageId);
+            const currentPage = document.querySelector('.page-section.active-page');
+
+            // 1. If we are NOT on the right page, switch pages first
+            if (currentPage !== targetPage) {
+                // Find the nav tab for that page and click it to trigger your SPA logic
+                const targetTab = document.querySelector(`.nav-tab[data-target="${targetPageId}"]`);
+                if (targetTab) targetTab.click();
+            }
+
+            // 2. Wait exactly 500ms for the page fade-in to finish, then scroll!
+            // (If we don't wait, the browser tries to scroll to an invisible element and fails)
+            setTimeout(() => {
+                const targetElement = document.getElementById(targetElementId);
+                if (targetElement) {
+                    
+                    // Smoothly scroll the item into the center of the screen
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Add the purple pulse animation
+                    targetElement.classList.add('target-highlight');
+                    
+                    // Remove the class after 2 seconds so it can fire again later if needed
+                    setTimeout(() => {
+                        targetElement.classList.remove('target-highlight');
+                    }, 2000);
+                }
+            }, 500); 
+        });
     });
 });

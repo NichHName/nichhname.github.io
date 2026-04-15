@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="style.css?v=7"> <!-- Update to v(t+1) when CSS doesn't update -->
+    <link rel="stylesheet" href="style.css?v=8"> <!-- Update to v(t+1) when CSS doesn't update -->
 </head>
 
-<!-- Version Testing: Project updates, adding images section, images/ folder -->
+<!-- Version Testing: resume, deep links, all that -->
 
 <body>
     <div class="container">
@@ -28,6 +28,9 @@
         </nav>
 
         <main class="content-wrapper">
+            <!-- ========================================= -->
+            <!-- HOME PAGE -->
+            <!-- ========================================= -->
             <div id="page-home" class="page-section active-page">
                 <header>
                     <h1 class="fade-in-text delay-1">Nicholas Harsell</h1>
@@ -36,19 +39,135 @@
 
                 <section id="bio" class="fade-in-text delay-3">
                     <h2>Biography</h2>
-                    <p>My name is Nicholas Harsell! Currently, I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies, as well as university-sponsored research in theoretical development of algorithms and data collection through the College of Science and Mathematics and College of Business. My career focus is in optimization, machine learning, algorithms, numerical analysis, and other fun areas of computational mathematics. Here, you will find a more expansive list of my current projects, coursework, conference presentations, and publications.</p>
+                    <p>My name is Nicholas Harsell! Currently, I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies, as well as university-sponsored research in theoretical development of algorithms and data collection through the College of Science and Mathematics and College of Business. My career focus is in optimization, machine learning, algorithms, numerical analysis, and other fun areas of computational mathematics. On this page, you can find my <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-research">highlighted research experience</a>, <a href="#" class="deep-link" data-target-page="page-home" data-target-id="ec-involvement">other extracurricular involvement</a>, and some <a href="#" class="deep-link" data-target-page="page-home" data-target-id="pictures">pictures</a> from my time at JMU.</p>
                 </section>
 
-                <section class="scroll-reveal">
-                    <h6>A View Into My Work</h6>
+                <section id="exp-research" class="scroll-reveal">
+                    <h2>Research Experience</h2>
+                    <p>Listed below are some highlighted research experiences of mine from my time at JMU.</p>
+                </section>
+                <div class="scroll-reveal">
+                    <div class="resume-container">
+                        <article class="resume-item scroll reveal" id="exp-oat-lab">
+                            <div class="resume-header">
+                                <div class="resume-left">
+                                    <h3>Research Assistant</h3>
+                                    <h4 class="resume-organization">Optimization and Algorithmic Theory Lab</h4>
+                                </div>
+                                <div class="resume-right">
+                                    <span class="resume-date">January 2026 - Present</span>
+                                </div>
+                            </div>
+                            <ul class="resume-bullets">
+                                <li>Proving novel convergence results for block-iterative updates of split Frank-Wolfe algorithms (FWSAs) for convex and non-convex objectives</li>
+                                <li>Formulating and proving lemmas regarding block-iterative updates of a product space relaxation problem to find solutions in an intersection of \(m\) constraint sets</li>
+                            </ul>
+                        </article>
+
+                        <article class="resume-item scroll reveal" id="exp-mimf">
+                            <div class="resume-header">
+                                <div class="resume-left">
+                                    <h3>Lead Quantitative Researcher</h3>
+                                    <h4 class="resume-organization">Madison Institute for Mathematical Finance (BIRCH Team)</h4>
+                                </div>
+                                <div class="resume-right">
+                                    <span class="resume-date">April 2025 - Present</span>
+                                </div>
+                            </div>
+                            <ul class="resume-bullets">
+                                <li>Leading a research project focused on developing new variational inference methods for information-theoretic machine learning</li>
+                                <li>Exploring methods of optimizing neural network generalization on time-series data through regime changes, founded on proven results in rate-distortion theory</li>
+                                <li>Planned and led 20 lectures for fellow researchers on linear algebra, probability, convex optimization, divergence measures, convergence, DSA, and generalization bounds</li>
+                        </article>
+
+                        <article class="resume-item scroll reveal" id="exp-cob">
+                            <div class="resume-header">
+                                <div class="resume-left">
+                                    <h3>Research Assistant</h3>
+                                    <h4 class="resume-organization">JMU College of Business</h4>
+                                </div>
+                                <div class="resume-right">
+                                    <span class="resume-date">May 2025 - August 2025</span>
+                                </div>
+                            </div>
+                            <ul class="resume-bullets">
+                                <li>Designed and implemented data pipelines to collect, clean, and standardize large-scale market data from U.S. Independent System Operators (ISOs)</li>
+                                <li>Constructed Parquet-based datasets containing decades of LMP data, enabling efficient querying and downstream statistical and financial modeling</li>
+                                <li>Handled over 270 million rows of data across 27 years for statistical/financial analysis</li>
+                        </article>
+                    </div>
+                </div>
+
+                <section id="ec-involvement" class="scroll-reveal">
+                    <h2>Extracurricular Involvement</h2>
+                
+                    <div class="scroll-reveal">
+                        <div class="resume-container">
+                            <article class="resume-item scroll reveal" id="ec-mimf">
+                                <div class="resume-header">
+                                    <div class="resume-left">
+                                        <h3>Co-founder & President</h3>
+                                        <h4 class="resume-organization">Madison Institute for Mathematical Finance</h4>
+                                    </div>
+                                    <div class="resume-right">
+                                        <span class="resume-date">April 2025 & April 2026 - Present</span>
+                                    </div>
+                                </div>
+                                <ul class="resume-bullets">
+                                    <li>Co-created introductory content for new researchers, including topics in linear algebra, probability, numerical methods, real analysis, and measure theory</li>
+                                    <li>Planned, programmed, edited, and directed <a href="#" class="deep-link" data-target-page="page-math" data-target-id="math-manim">custom Manim animations</a> as supportive content to help new researchers build intuition behind advanced math topics</li>
+                                    <li>Created organization structure, executed general body meetings, assured cooperation with university student organization policies</li>
+                                </ul>
+                            </article>
+
+                            <article class="resume-item scroll reveal" id="ec-iv">
+                                <div class="resume-header">
+                                    <div class="resume-left">
+                                        <h3>Administrative Coordinator</h3>
+                                        <h4 class="resume-organization">InterVarsity Christian Fellowship</h4>
+                                    </div>
+                                    <div class="resume-right">
+                                        <span class="resume-date">December 2024 - December 2025</span>
+                                    </div>
+                                </div>
+                                <ul class="resume-bullets">
+                                    <li>Served on the executive board of InterVarsity's largest chapter in the nation (600+ members)</li>
+                                    <li>Served on the PAC (President, Administrative Coordinator, Communications Coordinator) team to guide the greater executive team through event planning/execution and missions</li>
+                                    <li>Managed $25,000 in scholarship grants for three major conferences & retreats</li>
+                                    <li>Planned and led 80+ InterVarsity members in JMU's Freshmen Move-In</li>
+                            </article>
+                            <article class="resume-item scroll reveal" id="ec-scouts">
+                                <div class="resume-header">
+                                    <div class="resume-left">
+                                        <h3>Eagle Scout</h3>
+                                        <h4 class="resume-organization">Boy Scouts of America</h4>
+                                    </div>
+                                    <div class="resume-right">
+                                        <span class="resume-date">February 2016 - March 2023</span>
+                                    </div>
+                                </div>
+                                <ul class="resume-bullets">
+                                    <li>Earned the rank of Eagle Scout in March 2023, recognizing years of service, leadership experience, and skill-building</li>
+                                    <li>Led an Eagle Scout Project, delivering 500lbs+ of non-perishable food to a local food pantry through a multi-stage food drive in Loudoun and Shenandoah County</li>
+                                    <li>Served as Senior Patrol Leader: planned weekly meetings, monthly campouts, and a week-long summer camp for one of the largerst troops in the nation (70 scouts, 30 adult leaders)</li>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="pictures" class="scroll-reveal">
+                    <h2>A View Into My Work</h2>
                     <p>I've been able to participate in a multitude of endeavors, extracurricular or otherwise. I have participated in undergraduate research for both the College of Science and Mathematics (CSM), and the College of Business (COB).</p>
                     <p>(WIP) Below are some pictures from my time as a student, research assistant, and student organization President/Vice President!</p>
                 </section>
             </div>
 
+            <!-- ========================================= -->
+            <!-- MATH RESEARCH PAGE -->
+            <!-- ========================================= -->
             <div id="page-math" class="page-section">
                 <header>
-                    <h1 class="fade-in-text delay-1">Mathematics Research Projects</h1>
+                    <h1 class="fade-in-text delay-1">Mathematical Research</h1>
                 </header>
                 <section class="bio fade-in-text delay-2">
                     <h2>Overview</h2>
@@ -59,12 +178,12 @@
 
                     <div class="project-card">
                         <h3>Optimization and Algorithmic Theory Lab</h3>
-                        <p>I am a Research Assistant for the Optimization and Algorithmic Theory (OAT) Lab, a grant-funded research endeavor in theory and application of optimization algorithms. My work involves proving aspects of algorithmic convergence for variations of Frank-Wolfe algorithms dealing with convex and non-convex functions over multiple convex constraint sets.</p>
+                        <p>I am a Research Assistant for the Optimization and Algorithmic Theory (OAT) Lab, a grant-funded research endeavor in theory and application of optimization algorithms. Aside from the specific <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-oat-lab">technical aspects previously listed</a>, my work revolves around projection-free optimization methods to find numerically stable and fast algorithms for finding solutions to constrained optimization problems.</p>
                     </div>
 
                     <div class="project-card">
                         <h3>Reparameterization of the Information Bottleneck</h3>
-                        <p>The information bottleneck characterizes the tradeoff between information compression and learning. It has notable uses in neural network training and, more recently, a potential ability to explain the generalization abilities of deep neural networks (DNNs). This is a proprietary project which explores a new view of a time-dependent tradeoff parameter for time-series learning, neural network training, and generalization guarantees through PAC-Bayes bounds.</p>
+                        <p>The information bottleneck characterizes the tradeoff between information compression and learning. It has notable uses in neural network training and, more recently, a potential ability to explain the generalization abilities of deep neural networks (DNNs). This is a proprietary project which explores a new view of a time-dependent tradeoff parameter for time-series learning, neural network training, and generalization guarantees through PAC-Bayes bounds. This project is under my work as <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-mimf">Lead Quantitative Researcher</a> At the Madison Institute for Mathematical Finance.</p>
                     </div>
 
                     <a href="https://github.com/NichHName/fractal-dimension" target="_blank" class="card-link">
@@ -75,7 +194,7 @@
                     </a>
 
                     <a href="https://youtube.com/playlist?list=PLnzpcioXpyqXPlc79_4SSRa0geHB4Yuzq&si=7mfNq7wxSNNT8vX-" target="_blank" class="card-link">
-                        <div class="project-card">
+                        <div id="math-manim" class="project-card">
                             <h3>Visual Intuition for Advanced Mathematics</h3>
                             <p>This project is slightly different from the rest; it is centered around the idea that visualizing advanced mathematics can assist students in learning most topics. This project was programmed in Manim, a Python library developed by Grant Sanderson (3Blue1Brown), and includes 30+ minutes of tailored animations for students learning linear algebra, real analysis, probability, stochastic processes, and multivariate calculus.</p>
                         </div>
@@ -83,6 +202,9 @@
                 </section>
             </div>
 
+            <!-- ========================================= -->
+            <!-- PROGRAMMING PAGE -->
+            <!-- ========================================= -->
             <div id="page-programming" class="page-section">
                 <header>
                     <h1 class="fade-in-text delay-1">Programming Projects</h1>
@@ -120,6 +242,9 @@
                 </section>
             </div>
 
+            <!-- ========================================= -->
+            <!-- COURSEWORK PAGE -->
+            <!-- ========================================= -->
             <div id="page-coursework" class="page-section">
                 <header>
                     <h1 class="fade-in-text delay-1">Favorite Coursework</h1>
@@ -133,14 +258,14 @@
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Numerical Analysis</div>
                             <div class="course-topics">
-                                <p>Error correction, rootfinding (Newton-Raphson, Muller's method, Durand-Kerner, Aberth's), interpolation (Lagrange, Hermite, B-spline, Bezier curve), Chebyshev polynomials</p>
+                                <p>Error correction, rootfinding (Newton-Raphson, Muller's method, Durand-Kerner, Aberth's), interpolation (Lagrange, Hermite, B-spline, Bezier curve), Chebyshev polynomials, finding eigenvalues</p>
                             </div>
                         </div>
 
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Real Analysis I/II</div>
                             <div class="course-topics">
-                                <p>Axioms of \( \mathbb{Q} \), least upper bound property, cardinality, interior/limit open/closed sets, density, compactness, sequences, series, functions, differentiation, Riemann integration</p>
+                                <p>Axioms of \( \mathbb{Q} \), least upper bound property, cardinality, interior/limit open/closed sets, density, compactness, sequences, series, functions, differentiation, Riemann-Stieltjes integration, Borel sigma-algebras</p>
                             </div>
                         </div>
 
@@ -161,33 +286,36 @@
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Data Structures and Algorithms</div>
                             <div class="course-topics">
-                                <p>Big-\( \mathcal{O} \) / Big-\( \Omega \) / Big-\( \Theta \) notation, amortized analysis, custom iterators, linked lists, array-based lists, queues, sorting, searching</p>
+                                <p>Big-\( \mathcal{O} \) / Big-\( \Omega \) / Big-\( \Theta \) notation, amortized analysis, custom iterators, linked lists, array-based lists, queues, sorting algorithms, binary trees, heaps</p>
                             </div>
                         </div>
 
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Abstract Algebra</div>
                             <div class="course-topics">
-                                <p>Groups, homomorphisms, isomorphisms, roots of unity, symmetric group, dihedral group, permutation matrices, fundamental homomorphism theory</p>
+                                <p>Groups, homomorphisms, isomorphisms, roots of unity, symmetric group, dihedral group, permutation matrices, fundamental homomorphism theory, quotient/factor groups, rings, fields</p>
                             </div>
                         </div>
 
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Mathematical Finance</div>
                             <div class="course-topics">
-                                <p>Probability measures, probability spaces, expectation, stochastic integral evaluation, Ito's Lemma derivation</p>
+                                <p>Probability measures, probability spaces, expectation, stochastic integral evaluation, Ito's Lemma derivation, fundamental PDE derivation, closed-form Black-Scholes equation derivation</p>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
 
+            <!-- ========================================= -->
+            <!-- CONTACT PAGE -->
+            <!-- ========================================= -->
             <div id="page-contact" class="page-section">
                 <header>
                     <h1 class="fade-in-text delay-1">Get In Touch</h1>
                 </header>
                 <section class="bio fade-in-text delay-3">
-                    <p>Given I have time to commit, I am always open to exploring new avenues of computational research will passionate and curious people. I check my LinkedIn direct messages and email consistently, though it may be a day or two before I can sit down to fully respond. Regardless, I am open to research opportunities in acedemia and industry alike!</p>
+                    <p>If I have the time to commit, I am open to exploring new avenues of computational research with passionate and curious people. I check my LinkedIn direct messages and email consistently, though it may be a day or two before I can sit down to fully respond. Regardless, I am open to research opportunities in acedemia and industry alike!</p>
                 </section>
 
                 <section class="scroll-reveal contact-icons">
