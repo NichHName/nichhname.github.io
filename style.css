@@ -492,6 +492,35 @@ body:has(.course-tile.touch-open)::after {
 }
 /* --- End of Contact Cards --- */
 
+/* =============================================== */
+/* --- Photo Grid --- */
+/* =============================================== */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+    padding: 1rem;
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
 
 /* =============================================== */
 /* --- Footer --- */
