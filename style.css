@@ -10,7 +10,7 @@ body {
     padding: 0;
 
     background-image: 
-        url('images/perlin_6_purple.png');
+        url('images/perlin_6_purple.webp');
     background-size: 100% auto;
     background-position-x: center;
     background-position-y: 0px;
@@ -38,7 +38,7 @@ body::before {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 60rem;
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -200,7 +200,7 @@ header {
 
     column-gap: 2rem;
     row-gap: 1rem;
-    max-width: 1000px; 
+    max-width: 65rem;
     margin: 0 auto; 
 }
 
@@ -341,7 +341,7 @@ body:has(.course-tile.touch-open)::after {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    max-width: 900px;
+    max-width: 60rem;
     margin: 3rem auto 0 auto;
 }
 
@@ -499,7 +499,7 @@ body:has(.course-tile.touch-open)::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 65rem;
     margin: 3rem auto;
 }
 

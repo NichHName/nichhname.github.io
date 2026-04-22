@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Nicholas Harsell - Computational Mathematician</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <link rel="stylesheet" href="style.css?v=8"> <!-- Update to v(t+1) when CSS doesn't update -->
+    <link rel="stylesheet" href="style.min.css"> <!-- Update to ?v(t+1) when CSS doesn't update -->
+
+    <script src="script.min.js" defer></script> <!-- Update to ?v(t+1) when JS doesn't update -->
 </head>
 
 <!-- Version Testing: resume, deep links, all that -->
@@ -163,37 +165,37 @@
 
                 <div class="photo-gallery">
                     <figure class="gallery-item scroll-reveal">
-                        <img src="images/mimf-2025.jpg" alt="MIMF 2025 Cohort" loading="lazy">
+                        <img src="images/mimf-2025.webp" alt="MIMF 2025 Cohort" loading="lazy">
                         <figcaption>First MIMF Cohort, October 2025</figcaption>
                     </figure>
 
                     <figure class="gallery-item scroll-reveal">
-                        <img src="images/exec.jpg" alt="InterVarsity Exec 2025" loading="lazy">
+                        <img src="images/exec.webp" alt="InterVarsity Exec 2025" loading="lazy">
                         <figcaption>InterVarsity Exec Retreat, December 2024</figcaption>
                     </figure>
 
                     <figure class="gallery-item scroll-reveal">
-                        <img src="images/lecture.jpeg" alt="MIMF Lecture">
+                        <img src="images/lecture.webp" alt="MIMF Lecture">
                         <figcaption>Madison Institute for Mathematical Finance Lecture, September 2025</figcaption>
                     </figure>
 
                     <figure class="gallery-item scroll-reveal">
-                        <img src="images/fmi-2025.JPG" alt="JMU Freshmen Move-In 2025">
+                        <img src="images/fmi-2025.webp" alt="JMU Freshmen Move-In 2025">
                         <figcaption>40 out of 80+ volunteers, including JMU President James Schmidt, for InterVarsity's help with JMU's Freshmen Move-In, August 2025</figcaption>
                     </figure>
 
                     <figure class="gallery-item scroll-reveal">
-                        <img src="images/birch.jpeg" alt="BIRCH Meeting">
+                        <img src="images/birch.webp" alt="BIRCH Meeting">
                         <figcaption>Jack Zettlemoyer and I, BIRCH Team meeting, March 2026</figcaption>
                     </figure>
 
                     <figure class="gallery-item scroll-reveal">
-                        <img src="images/mimf2.jpg" alt="MIMF Lockin">
+                        <img src="images/mimf2.webp" alt="MIMF Lockin">
                         <figcaption>(Left to right) Jack Zettlemoyer, Timothy Tarter, Nicholas Harsell, and Arsenii Herasymov. Working on code, September 2025</figcaption>
                     </figure>
 
                     <figure class="gallery-item scroll-reveal">
-                        <img src="images/tarter.JPG" alt="Summer Beach Trip w/ Tarter">
+                        <img src="images/tarter.webp" alt="Summer Beach Trip w/ Tarter">
                         <figcaption>(Left to right) Blace Houle, Nicholas Harsell, Gunner Lyon, and Sean Tarter. Summer beach & in-person lecture trip, July 2025</figcaption>
                     </figure>
                 </div>
@@ -379,7 +381,5 @@
             <p>&copy; <span id="year"></span> Nicholas Harsell. All rights reserved.</p>
         </footer>
     </div>
-
-    <script src="script.js?v=2"></script> <!-- Update to v(t+1) when JS doesn't update -->
 </body>
 </html>
