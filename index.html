@@ -17,7 +17,7 @@
     <script src="script.min.js" defer></script> <!-- Update to ?v(t+1) when JS doesn't update -->
 </head>
 
-<!-- Version Testing: resume, deep links, all that -->
+<!-- Version Testing: big changes -->
 
 <body>
     <div class="container">
@@ -43,6 +43,16 @@
                     <h2>Biography</h2>
                     <p>My name is Nicholas Harsell! Currently, I am an undergraduate student at James Madison University majoring in quantitative finance and mathematics. Additionally, my broad passions led me to pick up minors in computer science, economics, computational analytics, and honors interdisciplinary studies, as well as university-sponsored research in theoretical development of algorithms and data collection through the College of Science and Mathematics and College of Business. My career focus is in optimization, machine learning, algorithms, numerical analysis, and other fun areas of computational mathematics. On this page, you can find my <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-research">highlighted research experience</a>, <a href="#" class="deep-link" data-target-page="page-home" data-target-id="ec-involvement">other extracurricular involvement</a>, and some <a href="#" class="deep-link" data-target-page="page-home" data-target-id="pictures">pictures</a> from my time at JMU.</p>
                 </section>
+
+                <hr class="fade-in-text delay-3">
+
+                <section id="special" class="scroll-reveal">
+                    <h2>Upcoming Presentation: MathFest 2026</h2>
+                    <h6>Mathematical Association of America | Boston, MA | August 5th - August 8th</h6>
+                    <p>I will be giving a contributed talk at MAA's MathFest 2026 this August! The abstract of this contributed paper session will be available online soon. The presentation itself is on my <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-oat-lab">research with the OAT Lab</a> on Frank-Wolfe algorithm development.</p>
+                </section>
+                
+                <hr class="fade-in-text delay-3">
 
                 <section id="exp-research" class="scroll-reveal">
                     <h2>Research Experience</h2>
@@ -99,6 +109,8 @@
                         </article>
                     </div>
                 </div>
+
+                <hr class="scroll-reveal">
 
                 <section id="ec-involvement" class="scroll-reveal">
                     <h2>Extracurricular Involvement</h2>
@@ -157,6 +169,8 @@
                     </div>
                 </div>
 
+                <hr class="scroll-reveal">
+
                 <section id="pictures" class="scroll-reveal">
                     <h2>A View Into My Work</h2>
                     <p>I've been able to participate in a multitude of endeavors, extracurricular or otherwise. I have participated in undergraduate research for both the College of Science and Mathematics (CSM), and the College of Business (COB).</p>
@@ -213,31 +227,69 @@
                     <p>The following projects are some highlighted current projects of mine; what separates these projects from my programming projects is a highlight in theoretical math development/understanding. Any good computational math project has programmed and reproduceable numerical experiments, but these projects run experiments in relatively unexplored (or entirely new) areas of analysis and machine learning.</p>
                 </section>
 
+                <hr class="scroll-reveal">
+
                 <section class="scroll-reveal">
-
-                    <div class="project-card">
-                        <h3>Optimization and Algorithmic Theory Lab</h3>
-                        <p>I am a Research Assistant for the Optimization and Algorithmic Theory (OAT) Lab, a grant-funded research endeavor in theory and application of optimization algorithms. Aside from the specific <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-oat-lab">technical aspects previously listed</a>, my work revolves around projection-free optimization methods to find numerically stable and fast algorithms for finding solutions to constrained optimization problems.</p>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Reparameterization of the Information Bottleneck</h3>
-                        <p>The information bottleneck characterizes the tradeoff between information compression and learning. It has notable uses in neural network training and, more recently, a potential ability to explain the generalization abilities of deep neural networks (DNNs). This is a proprietary project which explores a new view of a time-dependent tradeoff parameter for time-series learning, neural network training, and generalization guarantees through PAC-Bayes bounds. This project is under my work as <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-mimf">Lead Quantitative Researcher</a> At the Madison Institute for Mathematical Finance.</p>
-                    </div>
-
-                    <a href="https://github.com/NichHName/fractal-dimension" target="_blank" class="card-link">
-                        <div class="project-card">
-                            <h3>Numerical Analysis of Fractional Dimensions of Layed Perlin Noise</h3>
-                            <p>Perlin noise is a gradient noise algorithm used to generate smooth, seemless transitions across a plane. While typically used for virtual terrain generation, layering perlin noise generations on top of one another (called octaves) creates fractional Brownian motion (fBm). This project focuses on the computational methods for calculating the dimension of such processes, with potential implications to come.</p>
+                    
+                    <article class="project-card">
+                        <div class="project-info">
+                            <header>
+                                <h3>Optimization and Algorithmic Theory Lab</h3>
+                                <h5>Constrained Optimization • Linear Algebra • Real Analysis • Sequences</h5>
+                            </header>
+                            <div class="project-content">
+                                <p>I am a Research Assistant for the Optimization and Algorithmic Theory (OAT) Lab, a grant-funded research endeavor in theory and application of optimization algorithms. Aside from the specific <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-oat-lab">technical aspects previously listed</a>, my work revolves around projection-free optimization methods to find numerically stable and fast algorithms for finding solutions to constrained optimization problems.</p>
+                            </div>
                         </div>
-                    </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-info">
+                            <header>
+                                <h3>Reparameterization of the Information Bottleneck</h3>
+                                <h5>Information Theory • Variational Inference • Rate Distortion Theory • Bayesian Methods</h5>
+                            </header>
+                            <div class="project-content">
+                                <p>The information bottleneck characterizes the tradeoff between information compression and learning. It has notable uses in neural network training and, more recently, a potential ability to explain the generalization abilities of deep neural networks (DNNs). This is a proprietary project which explores a new view of a time-dependent tradeoff parameter for time-series learning, neural network training, and generalization guarantees through PAC-Bayes bounds. This project is under my work as <a href="#" class="deep-link" data-target-page="page-home" data-target-id="exp-mimf">Lead Quantitative Researcher</a> At the Madison Institute for Mathematical Finance.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <a href="docs/frac_dim_perlin_handout.pdf" target="_blank">
+                                <img src="images/frac_slide_1.webp" alt="Slide 1 of Fractional Dimensions of Layered Perlin Noise" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <header>
+                                <h3>Numerical Analysis of Fractional Dimensions of Layered Perlin Noise</h3>
+                                <h5>Python • Numerical Analysis • Computational Math</h5>
+                            </header>
+                            <div class="project-content">
+                                <p>Perlin noise is a gradient noise algorithm used to generate smooth, seamless transitions across a plane. While typically used for virtual terrain generation, layering Perlin noise generations on top of one another (called octaves) approximates fractional Brownian motion (fBm). This project focuses on the computational methods for calculating the dimension of such processes, with potential implications to come. In the GitHub Repository linked below, you can find code to generate perlin noise with any fractal dimension between 2 and 3.</p>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/NichHName/fractal-dimension" target="_blank" class="btn-link">View GitHub Repo <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
 
                     <a href="https://youtube.com/playlist?list=PLnzpcioXpyqXPlc79_4SSRa0geHB4Yuzq&si=7mfNq7wxSNNT8vX-" target="_blank" class="card-link">
-                        <div id="math-manim" class="project-card">
-                            <h3>Visual Intuition for Advanced Mathematics</h3>
-                            <p>This project is slightly different from the rest; it is centered around the idea that visualizing advanced mathematics can assist students in learning most topics. This project was programmed in Manim, a Python library developed by Grant Sanderson (3Blue1Brown), and includes 30+ minutes of tailored animations for students learning linear algebra, real analysis, probability, stochastic processes, and multivariate calculus.</p>
-                        </div>
+                        <article class="project-card">
+                            <div class="project-info">
+                                <header>
+                                    <h3>Visual Intuition for Advanced Mathematics</h3>
+                                    <h5>Math Education • Manim</h5>
+                                </header>
+                                <div class="project-content">
+                                    <p>This project is slightly different from the rest; it is centered around the idea that visualizing advanced mathematics can assist students in learning most topics. This project was programmed in Manim, a Python library developed by Grant Sanderson (3Blue1Brown), and includes 30+ minutes of tailored animations for students learning linear algebra, real analysis, probability, stochastic processes, and multivariate calculus.</p>
+                                </div>
+                            </div>
+                        </article>
                     </a>
+
                 </section>
             </div>
 
@@ -252,32 +304,52 @@
                     <h2>Overview</h2>
                     <p>In addition to developing an interest and experience in higher-level math, I also find myself programming various medium-sized projects in my free time. These range from numerical/mathematical libraries to Chess engines to this website, allowing me to gain experience in all sides of programming and development.</p>
                 </section>
+
+                <hr class="scroll-reveal">
+
                 <section class="scroll-reveal">
-                    <a href="https://github.com/NichHName/linalglib" target="_blank" class="card-link">
-                        <div class="project-card">
-                            <h3>Linear Algebra Library</h3>
-                            <h5>Primary Language: C++</h5>
-                            <p>Combining my experience with linear algebra and my desire to master C++, I created a linear algebra library in C++. This includes simple computations such as inner products, L2 norms, and matrix products; it also includes efficient methods to compute eigenvectors/eigenvalues, decompositions (spectal, SVD, LU), and more. Most importantly, this project focuses on efficient storage of data.</p>
+
+                    <article class="project-card">
+                        <div class="project-info">
+                            <header>
+                                <h3>Python Chess Engine</h3>
+                                <h5>Primary Language: Python</h5>
+                            </header>
+
+                            <div class="project-content">
+                                <p>I've always been a player of chess at some level. Exploring move sequences and tactical positions with friends was a rewarding past-time. However, the purpose of this project was to challenge myself and push my ability to write highly optimized code. This project uses no libraries and no languages outside of Python; the game engine, neural network architecture, training process, pruning logic, and game algorithms are all hand-crafted.</p>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
-                    <div class="project-card">
-                        <h3>Persistent Homology Lite</h3>
-                        <h5>Primary Language: Python</h5>
-                        <p>Topological Data Analysis (TDA) is an explored area, but it still has plenty of benefits in nearly every industry. This project is an exploration for my own knowledge of the inner workings of persistent homology, a tool ubiquitous with TDA.</p>
-                    </div>
+                    <article class="project-card">
+                        <div class="project-info">
+                            <header>
+                                <h3>Linear Algebra Library</h3>
+                                <h5>Primary Language: C++</h5>
+                            </header>
+                            <div class="project-content">
+                                <p>Combining my experience with linear algebra and my desire to master C++, I created a linear algebra library in C++. This includes simple computations such as inner products, L2 norms, and matrix products; it also includes efficient methods to compute eigenvectors/eigenvalues, decompositions (spectal, SVD, LU), and more. Most importantly, this project focuses on efficient storage of data.</p>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/NichHName/linalglib" target="_blank" class="btn-link">View GitHub Repo <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div class="project-card">
-                        <h3>Pure Chess Engine</h3>
-                        <h5>Primary Language: Python</h5>
-                        <p>I've always been a player of chess at some level. Exploring move sequences and tactical positions with friends was a rewarding past-time. However, the purpose of this project was to challenge myself and push my ability to write highly optimized code. This project uses no libraries and no languages outside of Python; the game engine, neural network architecture, training process, pruning logic, and game algorithms are all hand-crafted.</p>
-                    </div>
+                    <article class="project-card">
+                        <div class="project-info">
+                            <header>
+                                <h3>Persistent Homology Lite</h3>
+                                <h5>Primary Language: Python</h5>
+                            </header>
+                            <div class="project-content">
+                                <p>Topological Data Analysis (TDA) is an explored area, but it still has plenty of benefits in nearly every industry. This project is an exploration for my own knowledge of the inner workings of persistent homology, a tool ubiquitous with TDA.</p>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div class="project-card">
-                        <h3>Mini Ray-Tracer</h3>
-                        <h5>Primary Language: C++</h5>
-                        <p>Ray-tracing is a rendering technique used to create photorealistic images. This project is a mini ray-tracer built in C++ which includes features such as anti-aliasing, depth of field, and more. The goal of this project is to explore the computational geometry and optimization techniques used in ray-tracing.</p>
-                    </div>
                 </section>
             </div>
 
@@ -304,7 +376,7 @@
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Real Analysis I/II</div>
                             <div class="course-topics">
-                                <p>Axioms of \( \mathbb{Q} \), least upper bound property, cardinality, interior/limit open/closed sets, density, compactness, sequences, series, functions, differentiation, Riemann-Stieltjes integration, Borel sigma-algebras</p>
+                                <p>Axioms of \( \mathbb{Q} \), least upper bound property, cardinality, interior/limit open/closed sets, density, compactness, sequences, series, functions, differentiation, Riemann-Stieltjes integration, Borel sigma-algebras, Lebesgue measure</p>
                             </div>
                         </div>
 
@@ -325,21 +397,21 @@
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Data Structures and Algorithms</div>
                             <div class="course-topics">
-                                <p>Big-\( \mathcal{O} \) / Big-\( \Omega \) / Big-\( \Theta \) notation, amortized analysis, custom iterators, linked lists, array-based lists, queues, sorting algorithms, binary trees, heaps</p>
+                                <p>Hashing, lists, queues, heaps, binary & AVL trees, sorting/searching algorithms, custom iterators, amortized analysis, Big-\( \mathcal{O} \) / Big-\( \Omega \) / Big-\( \Theta \) notation</p>
                             </div>
                         </div>
 
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Abstract Algebra</div>
                             <div class="course-topics">
-                                <p>Groups, homomorphisms, isomorphisms, roots of unity, symmetric group, dihedral group, permutation matrices, fundamental homomorphism theory, quotient/factor groups, rings, fields</p>
+                                <p>Groups, homomorphisms, isomorphisms, roots of unity, symmetric/dihedral groups, permutation matrices, fundamental homomorphism theory, quotient/factor groups, rings, integral domains, fields</p>
                             </div>
                         </div>
 
                         <div class="course-tile" tabindex="0">
                             <div class="course-name">Mathematical Finance</div>
                             <div class="course-topics">
-                                <p>Probability measures, probability spaces, expectation, stochastic integral evaluation, Ito's Lemma derivation, fundamental PDE derivation, closed-form Black-Scholes equation derivation</p>
+                                <p>Probability measures/spaces, expectation, stochastic calculus, Ito's Lemma, derivation of the fundamental PDE/Black-Scholes closed-form, risk-neutral measures</p>
                             </div>
                         </div>
                     </div>
