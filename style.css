@@ -278,11 +278,15 @@ hr {
     gap: 0rem;
 }
 
+.project-content {
+    margin-top: -2.5rem;
+}
+
 .project-content p {
     color: #d0d0d0;
     line-height: 1.6;
     margin-bottom: 0.5rem;
-    margin-top: -1rem;
+    margin-top: 1.5rem;
 }
 
 .project-links {
