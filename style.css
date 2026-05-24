@@ -654,6 +654,40 @@ body:has(.course-tile.touch-open)::after {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Research Tags on Contact Page */
+.research-label {
+  font-size: 1rem;
+  text-align: center;
+  color: #a0a0a0; /* or whatever your site's muted text color is */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tag {
+  font-size: 13px;
+  color: #eeedfe;
+  background: rgba(107, 33, 168, 0.4);
+  border-radius: 999px;
+  padding: 5px 14px;
+
+  transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+
 /* =============================================== */
 /* --- Footer --- */
 /* =============================================== */
