@@ -140,12 +140,8 @@ h6 {
 
 header {
     margin-bottom: 40px;
-    /* border-bottom: 2px solid #333333; */
-
-    /* 1. Set the physical border space (keep the thickness at 1px or 2px) */
     border-bottom: 2px solid; 
     
-    /* 2. Paint it with the premium fading gradient */
     border-image: linear-gradient(90deg, 
         transparent 0%, 
         rgba(255, 255, 255, 0.2) 15%, 
@@ -160,7 +156,6 @@ hr {
     border: none !important;
     height: 1.5px !important;
     
-    /* THE FIX: Uses percentages to stretch the solid color across the middle 70% of the line */
     background: linear-gradient(90deg, 
         transparent 0%, 
         rgba(255, 255, 255, 0.2) 15%, 
@@ -212,7 +207,7 @@ hr {
 
     background-color: rgba(18, 18, 18, 0.75);
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(146, 103, 177, 0.767);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -235,7 +230,7 @@ hr {
 
 .project-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.5); /* A slightly brighter purple */
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.5);
 }
 
 .project-card:has(.project-media) {
@@ -293,9 +288,6 @@ hr {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap; /* Ensures buttons don't bleed off the screen on phones */
-    
-    /* This pushes the buttons to the very bottom of the card, 
-       ensuring they always line up perfectly even if one project has more text than another! */
     margin-top: 0.5rem;
 }
 
