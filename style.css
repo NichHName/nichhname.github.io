@@ -741,6 +741,9 @@ footer {
     h3 {
         font-size: 1.3rem;
     }
+    h6 {
+        font-size: 1.3rem;
+    }
 
     /* 2. THE NAVIGATION BAR */
     .top-nav {
