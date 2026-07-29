@@ -291,6 +291,16 @@ hr {
     margin-top: 0.5rem;
 }
 
+/* Presentation modifier */
+.presentation-card {
+    border-color: rgba(255, 215, 0, 0.767);
+    box-shadow: 0 4px 12px rgba(181, 148, 16, 0.4); 
+}
+
+.presentation-card:hover {
+    box-shadow: 0 6px 18px rgba(181, 148, 16, 0.5);
+}
+
 .btn-link {
     color: #ffffff;
     text-decoration: none;
