@@ -33,7 +33,7 @@ body::before {
     mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
     -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%); /* Safari support */
 
-    z-index: 0; 
+    z-index: -1; 
     pointer-events: none; 
 }
 
@@ -630,16 +630,24 @@ body:has(.course-tile.touch-open)::after {
 /* --- Photo Grid --- */
 /* =============================================== */
 .photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 65rem;
-    margin: 3rem auto;
+    columns: 25rem 3;
+    column-gap: 0rem;
+    max-width: 100rem;
+    margin: 2rem auto;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .gallery-item img {
     width: 100%;
     display: block;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
     transition: transform 0.3s ease;
 }
 
@@ -648,12 +656,13 @@ body:has(.course-tile.touch-open)::after {
 }
 
 .gallery-item figcaption {
-    padding: 1rem;
+    padding: 0.2rem;
     text-align: center;
     color: #e0e0e0;
     font-size: 0.9rem;
     font-family: 'Montserrat', sans-serif;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    break-inside: avoid;
+    margin-bottom: 3rem;
 }
 
 /* Research Tags on Contact Page */
